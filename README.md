@@ -122,29 +122,19 @@ text
 sagemate/
 ├── src/
 │   ├── app/
-│   │   ├── globals.css          # Global styles, CSS variables, animations
-│   │   ├── layout.tsx           # Root layout with fonts and providers
-│   │   ├── page.tsx             # Home page with emotion states
-│   │   └── login/               # Authentication pages (future)
+│   │   ├── globals.css          # Global styles and CSS variables
+│   │   ├── layout.tsx           # Root layout component
+│   │   ├── page.tsx             # Home page component
+│   │   └── api/                 # API routes (future)
 │   ├── components/
-│   │   ├── ui/                  # Shadcn UI components (Button, etc.)
-│   │   ├── auth/                # Authentication components
-│   │   │   └── SignInButton.tsx # Sign in functionality
-│   │   ├── header.tsx           # Main navigation header
-│   │   ├── provider.tsx         # App providers
-│   │   ├── theme-provider.tsx   # Theme context provider
-│   │   └── theme-toggle.tsx     # Theme switch component
-│   ├── lib/
-│   │   └── utils.ts             # Utility functions (cn helper)
-│   └── types/                   # TypeScript definitions (future)
+│   │   ├── ui/                  # Shadcn UI components
+│   │   ├── header.tsx           # Navigation header
+│   │   └── provider.tsx         # Theme provider
+│   ├── lib/                     # Utility functions
+│   └── types/                   # TypeScript type definitions
 ├── public/                      # Static assets
-├── configuration files
-│   ├── tailwind.config.js       # Tailwind configuration
-│   ├── next.config.ts           # Next.js configuration
-│   ├── tsconfig.json            # TypeScript configuration
-│   ├── postcss.config.mjs       # PostCSS configuration
-│   ├── eslint.config.mjs        # ESLint configuration
-│   └── components.json          # UI components configuration
+├── tailwind.config.js           # Tailwind configuration
+├── next.config.js              # Next.js configuration
 └── package.json
 🎨 UI/UX Features
 Modern Design: Clean, accessible interface with glass morphism effects
