@@ -4,8 +4,6 @@ Sagemate is an AI-powered therapist web application that provides mental health 
 
 ---
 
-
-
 ## 🛠 Tech Stack
 
 ### Frontend
@@ -100,25 +98,33 @@ Sagemate is an AI-powered therapist web application that provides mental health 
 ### Installation
 
 1. **Clone the repository**:
-
+```bash
 git clone https://github.com/yourusername/sagemate.git
 cd sagemate
+```
 Install dependencies:
 
-bash
+```bash
 npm install
+```
 Run the development server:
 
-bash
+```bash
 npm run dev
-Open your browser and navigate to http://localhost:3000
+```
+Open your browser and navigate to `http://localhost:3000`
+
 
 Building for Production
-bash
+```bash
 npm run build
 npm start
-🗂 Project Structure
+```
+
+---
+🗂 **Project Structure**
 text
+```
 sagemate/
 ├── src/
 │   ├── app/
@@ -134,92 +140,76 @@ sagemate/
 │   └── types/                   # TypeScript type definitions
 ├── public/                      # Static assets
 ├── tailwind.config.js           # Tailwind configuration
-├── next.config.js              # Next.js configuration
+├── next.config.js               # Next.js configuration
 └── package.json
+```
+
 🎨 UI/UX Features
-Modern Design: Clean, accessible interface with glass morphism effects
+---
 
-Responsive: Mobile-first approach with seamless desktop experience
+**Modern Design:** Clean, accessible interface with glass morphism effects
 
-Theme Support: Full dark/light mode with system preference detection
+**Responsive:** Mobile-first approach with seamless desktop experience
 
-Smooth Animations: CSS transitions, ripple effects, and micro-interactions
+**Theme Support:** Full dark/light mode with system preference detection
 
-Accessibility: WCAG compliant with proper focus management
+**Smooth Animations:** CSS transitions, ripple effects, and micro-interactions
 
-Typography: Optimized font loading with Geist font family
+**Accessibility:** WCAG compliant with proper focus management
 
-🔧 Component Details
-Header Component
-Fixed positioning with scroll-aware background
+**Typography:** Optimized font loading with Geist font family
 
-Responsive navigation (desktop + mobile)
 
-Theme toggle with system preference
-
-Progress indicator
-
-Sign In authentication flow
-
-Theme System
-Uses next-themes for theme management
-
-CSS variable based theming
-
-No flash on initial load
-
-System preference detection
-
-UI Primitives
-Button: Multiple variants (default, destructive, outline, secondary, ghost, link)
-
-Ripple: Visual effect component for interactions
-
-ThemeToggle: Switch between light/dark/system themes
 
 📈 Development Roadmap
-Phase 1: Foundation ✅
-Project setup and configuration
+---
 
-Design system implementation
+**Phase 1**: Foundation ✅
+- Project setup and configuration
 
-Core layout and navigation
+- Design system implementation
 
-Theme system
+- Core layout and navigation
 
-Phase 2: Core Features (Current)
+- Theme system
+
+**Phase 2**: Core Features (Current)
 Emotion selection interface
 
-AI chat interface components
+- AI chat interface components
 
-Basic API route structure
+- Basic API route structure
 
-User authentication system
+- User authentication system
 
-Phase 3: AI Integration
-OpenAI GPT-4 integration
+**Phase 3**: AI Integration
+- OpenAI GPT-4 integration
 
-Chat session management
+- Chat session management
 
-Message persistence
+- Message persistence
 
-Therapy conversation flows
+- Therapy conversation flows
 
-Phase 4: User System
-NextAuth.js authentication
+**Phase 4**: User System
+- NextAuth.js authentication
 
-User profiles and history
+- User profiles and history
 
-Session analytics and insights
+- Session analytics and insights
 
-🐛 Known Issues
+
+🐛### Known Issues
+---
 Hydration warnings in development mode (being addressed)
 
-Mobile menu animations need refinement
+Mobile📱 menu animations need refinement
 
 Theme persistence across page reloads
 
-🤝 Contributing
+
+🤝 Contributin
+---
 We welcome contributions! Please follow these steps:
 
 Fork the repository
@@ -233,21 +223,30 @@ Push to the branch (git push origin feature/amazing-feature)
 Open a Pull Request
 
 Please ensure your code follows our coding standards and includes appropriate tests.
+---
 
 ⚖️ License
-This project is licensed under the MIT License - see the LICENSE file for details.
+---
+** This project is licensed under the MIT License - see the LICENSE file for details **.
 
 🙏 Acknowledgments
-Next.js for the amazing React framework
+---
+- Next.js for the amazing React framework
 
-Tailwind CSS for the utility-first CSS
+- Tailwind CSS for the utility-first CSS
 
-Shadcn UI for the beautiful components
+- Shadcn UI for the beautiful components
 
-Lucide for the elegant icons
-
-CodeRabbit for AI-powered code reviews
-
+- Lucide for the elegant icons
 
 
-MIT License © 2025 Saurabh Pandey
+
+🚀CodeRabbit🔥 for AI-powered🤖 code reviews
+---
+
+MIT License © 2025 
+<div clasName="align-item: center ">
+  Saurabh Pandey ❤️
+  
+</div>
+
