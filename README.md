@@ -4,53 +4,90 @@ Sagemate is an AI-powered therapist web application that provides mental health 
 
 ---
 
+
+
 ## 🛠 Tech Stack
 
 ### Frontend
 - **Framework**: Next.js 14 (App Router)  
+- **Language**: TypeScript
 - **Styling**: Tailwind CSS + CSS Variables  
 - **UI Components**: Shadcn UI  
 - **Fonts**: Geist Sans & Geist Mono  
 - **Icons**: Lucide React  
+- **State Management**: React Hooks
+- **Theme System**: next-themes
 
 ### Backend
 - **Runtime**: Node.js  
-- **Framework**: Next.js API Routes / Express.js (planned)  
+- **Framework**: Next.js API Routes
 - **Database**: MongoDB (planned)  
 - **Auth**: NextAuth.js (planned)  
 
-### AI
-- **AI Service**: OpenAI GPT-4 (planned)
+### Development Tools
+- **Package Manager**: npm
+- **Linting**: ESLint
+- **Build Tool**: PostCSS
 
 ---
 
 ## ✨ Features
 
+### ✅ Implemented
+- **Responsive Header**: Fixed navigation with theme toggle and progress indicator
+- **Theme System**: Complete light/dark mode with system preference detection
+- **Landing Page**: Animated visuals with emotion states and ripple effects
+- **UI Components**: Reusable Button and Ripple components
+- **Authentication**: Sign In button with login routing
+- **Global Design System**: CSS variables, utilities, and animations
+
+### 🔄 Planned Features
 - Interactive AI-based therapy chatbot  
 - Personalized mental health suggestions  
-- Responsive and modern UI using Tailwind CSS  
-- Reusable UI components via Shadcn UI  
+- User authentication and sessions
+- Therapy session history
+- Mood tracking and analytics
 - Persistent data storage with MongoDB  
 
 ---
 
-## 📌 Day-01 Progress
+## 📌 Development Progress
 
-### ✅ Completed
-- **Header Component**: Responsive navigation with dark/light theme toggle  
-- **Layout Setup**: Root layout with meta tags and font configuration  
-- **UI Foundation**: Tailwind CSS configuration with custom design system  
-- **Component Structure**: Reusable UI components using Shadcn UI  
+### Initial Release (Commit e1c3475)
 
-### 🐛 Issues Fixed
-- React hydration errors in Header component  
-- CSS variable configuration for dark/light themes  
-- Font optimization with Geist Sans/Mono  
+#### ✅ Completed Features
+- **Project Setup**: Next.js 14 with TypeScript, Tailwind, ESLint configuration
+- **Responsive Header**: 
+  - Fixed navigation with scroll-aware styles
+  - Desktop and mobile menu support
+  - Progress indicator on scroll
+  - Theme toggle functionality
+- **Theme System**:
+  - Global light/dark theme providers
+  - System preference detection
+  - Smooth theme transitions
+- **Landing Page**:
+  - Animated ripple visual components
+  - Emotion state scaffolding
+  - Responsive design
+- **UI Foundation**:
+  - Reusable Button component with variants
+  - Ripple visual effect component
+  - Theme toggle component
+  - Global design tokens and CSS variables
 
-### 🔄 Next Steps
-- Implement emotion selection interface  
-- Build AI chat interface component  
-- Set up API routes for AI integration  
+#### 🎨 Design System
+- **Typography**: Geist Sans & Geist Mono fonts
+- **Colors**: Complete light/dark theme with CSS variables
+- **Animations**: Custom keyframes and transition utilities
+- **Layout**: Responsive grid and flexbox systems
+- **Components**: Shadcn UI based component library
+
+#### 🔧 Technical Implementation
+- **Configuration**: TypeScript paths, PostCSS with Tailwind, ESLint
+- **State Management**: React hooks for theme and UI state
+- **Performance**: Optimized fonts and component structure
+- **Accessibility**: Focus management and semantic HTML
 
 ---
 
@@ -59,65 +96,168 @@ Sagemate is an AI-powered therapist web application that provides mental health 
 ### Prerequisites
 - Node.js >= 18.x  
 - npm >= 9.x  
-- MongoDB (local or cloud)  
 
 ### Installation
-1. Clone the repository:
 
-```bash
+1. **Clone the repository**:
+
 git clone https://github.com/yourusername/sagemate.git
 cd sagemate
-
 Install dependencies:
 
+bash
 npm install
-
-
-Configure environment variables:
-
-Create a .env file in the root:
-
-MONGODB_URI=your_mongodb_connection_string
-NEXT_PUBLIC_API_URL=http://localhost:3000/api
-
-
 Run the development server:
 
+bash
 npm run dev
+Open your browser and navigate to http://localhost:3000
 
-
-Open http://localhost:3000
- in your browser to view the app.
-
+Building for Production
+bash
+npm run build
+npm start
 🗂 Project Structure
+text
 sagemate/
-├─ src/
-│  ├─ app/
-│  │  ├─ globals.css
-│  │  └─ components/
-│  ├─ server/
-│  ├─ db/
-│  └─ utils/
-├─ .env
-├─ package.json
-└─ README.md
+├── src/
+│   ├── app/
+│   │   ├── globals.css          # Global styles, CSS variables, animations
+│   │   ├── layout.tsx           # Root layout with fonts and providers
+│   │   ├── page.tsx             # Home page with emotion states
+│   │   └── login/               # Authentication pages (future)
+│   ├── components/
+│   │   ├── ui/                  # Shadcn UI components (Button, etc.)
+│   │   ├── auth/                # Authentication components
+│   │   │   └── SignInButton.tsx # Sign in functionality
+│   │   ├── header.tsx           # Main navigation header
+│   │   ├── provider.tsx         # App providers
+│   │   ├── theme-provider.tsx   # Theme context provider
+│   │   └── theme-toggle.tsx     # Theme switch component
+│   ├── lib/
+│   │   └── utils.ts             # Utility functions (cn helper)
+│   └── types/                   # TypeScript definitions (future)
+├── public/                      # Static assets
+├── configuration files
+│   ├── tailwind.config.js       # Tailwind configuration
+│   ├── next.config.ts           # Next.js configuration
+│   ├── tsconfig.json            # TypeScript configuration
+│   ├── postcss.config.mjs       # PostCSS configuration
+│   ├── eslint.config.mjs        # ESLint configuration
+│   └── components.json          # UI components configuration
+└── package.json
+🎨 UI/UX Features
+Modern Design: Clean, accessible interface with glass morphism effects
 
-📈 Future Work
+Responsive: Mobile-first approach with seamless desktop experience
 
-Implement AI chatbot functionality
+Theme Support: Full dark/light mode with system preference detection
 
-Add user authentication (JWT + cookies)
+Smooth Animations: CSS transitions, ripple effects, and micro-interactions
 
-Build therapy session logging
+Accessibility: WCAG compliant with proper focus management
 
-Enhance UI components with Shadcn UI
+Typography: Optimized font loading with Geist font family
 
-Integrate analytics for user interactions
+🔧 Component Details
+Header Component
+Fixed positioning with scroll-aware background
+
+Responsive navigation (desktop + mobile)
+
+Theme toggle with system preference
+
+Progress indicator
+
+Sign In authentication flow
+
+Theme System
+Uses next-themes for theme management
+
+CSS variable based theming
+
+No flash on initial load
+
+System preference detection
+
+UI Primitives
+Button: Multiple variants (default, destructive, outline, secondary, ghost, link)
+
+Ripple: Visual effect component for interactions
+
+ThemeToggle: Switch between light/dark/system themes
+
+📈 Development Roadmap
+Phase 1: Foundation ✅
+Project setup and configuration
+
+Design system implementation
+
+Core layout and navigation
+
+Theme system
+
+Phase 2: Core Features (Current)
+Emotion selection interface
+
+AI chat interface components
+
+Basic API route structure
+
+User authentication system
+
+Phase 3: AI Integration
+OpenAI GPT-4 integration
+
+Chat session management
+
+Message persistence
+
+Therapy conversation flows
+
+Phase 4: User System
+NextAuth.js authentication
+
+User profiles and history
+
+Session analytics and insights
+
+🐛 Known Issues
+Hydration warnings in development mode (being addressed)
+
+Mobile menu animations need refinement
+
+Theme persistence across page reloads
 
 🤝 Contributing
+We welcome contributions! Please follow these steps:
 
-Contributions are welcome! Feel free to submit a pull request or open an issue.
+Fork the repository
+
+Create a feature branch (git checkout -b feature/amazing-feature)
+
+Commit your changes (git commit -m 'Add amazing feature')
+
+Push to the branch (git push origin feature/amazing-feature)
+
+Open a Pull Request
+
+Please ensure your code follows our coding standards and includes appropriate tests.
 
 ⚖️ License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+🙏 Acknowledgments
+Next.js for the amazing React framework
+
+Tailwind CSS for the utility-first CSS
+
+Shadcn UI for the beautiful components
+
+Lucide for the elegant icons
+
+CodeRabbit for AI-powered code reviews
+
+
 
 MIT License © 2025 Saurabh Pandey
