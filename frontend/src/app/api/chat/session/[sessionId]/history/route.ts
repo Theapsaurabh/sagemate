@@ -3,22 +3,27 @@ import { NextRequest, NextResponse } from "next/server";
 
 const BACKEND_API_URL = process.env.BACKEND_API_URL || "https://sagemate-backend.onrender.com";
 
+// Correct type for Next.js 15 App Router
+interface RouteContext {
+  params: Promise<{ sessionId: string }>;
+}
+
 export async function GET(
   req: NextRequest,
-  { params }: { params: { sessionId: string } }
+  context: RouteContext
 ) {
   try {
-    const { sessionId } = params;
+    // Await the params since they're a Promise in Next.js 15
+    const { sessionId } = await context.params;
+    
     console.log(`Getting chat history for session ${sessionId}`);
     
-    // FIX: Correct endpoint URL
     const response = await fetch(
-      `${BACKEND_API_URL}/chat/sessions/${sessionId}/history`, // FIXED: removed extra /session
+      `${BACKEND_API_URL}/chat/sessions/${sessionId}/history`,
       {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          // ADD: Include auth token if needed
           "Authorization": req.headers.get("Authorization") || "",
         },
         credentials: "include",
@@ -36,11 +41,19 @@ export async function GET(
     
     const data = await response.json();
     
-    // FIX: Proper message formatting
+    // Add safety check for data format
+    if (!Array.isArray(data)) {
+      console.error("Invalid response format from backend:", data);
+      return NextResponse.json(
+        { error: "Invalid response format from server" },
+        { status: 500 }
+      );
+    }
+    
     const formattedMessages = data.map((msg: any) => ({
       role: msg.role,
       content: msg.content,
-      timestamp: msg.timestamp || msg.timeStamp // Handle both cases
+      timestamp: msg.timestamp || msg.timeStamp || new Date().toISOString()
     }));
     
     return NextResponse.json(formattedMessages);
