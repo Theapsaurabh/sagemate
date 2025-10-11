@@ -1,4 +1,4 @@
-import express, { Request, Response } from "express";
+import express from "express";
 import { serve } from "inngest/express";
 import { inngest } from "./inngest";
 import { functions as inngestFunctions } from "./inngest/functions"; 
@@ -9,7 +9,6 @@ import helmet from "helmet";
 import cors from "cors";
 import morgan from "morgan";
 import authRoutes from "./routes/auth"
-import { errorHandler } from "./middleware/errorHandler";
 import chatRouter from "./routes/chat";
 import moodRouter from "./routes/mood";
 import activityRouter from "./routes/activity";
@@ -32,7 +31,7 @@ app.use("/chat", chatRouter);
 app.use("/api/mood", moodRouter);
 app.use("/api/activity", activityRouter);
 
-app.use(errorHandler);
+
 
 const startServer = async() => {
     try {

@@ -2,18 +2,17 @@ import { Request, Response } from "express";
 import { v4 as uuidv4 } from "uuid";
 import { logger } from "../utils/logger";
 import { User } from "../models/User";
-import { inngest } from "../inngest";
 import { Types } from "mongoose";
-import { ChatSession, IChatSession } from "../models/chat";
-import { InngestEvent } from "../types/inngest";
+import { ChatSession } from "../models/chat";
 import { GoogleGenAI } from "@google/genai";
 
+
 const genAI = new GoogleGenAI({
-  apiKey: process.env.GEMINI_API_KEY ,
+  apiKey: process.env.GEMINI_API_KEY || "AIzaSyDmPD_Qc3HOxSwOIk2bqMpo7syXAVAjcHg",
 });
 
 // Enhanced helper function to clean and optimize AI responses
-function optimizeTherapistResponse(rawResponse: string, messageType: string, analysis: any): string {
+function optimizeTherapistResponse(rawResponse: string, analysis: any): string {
   let cleaned = rawResponse
     // Remove common AI verbose patterns
     .replace(/^(Okay, |Alright, |I understand, |That's completely understandable, |I hear you, |I appreciate you sharing that, |Thank you for sharing, )/gi, '')
@@ -124,17 +123,19 @@ export const getChatSessions = async (req: Request, res: Response) => {
 export const createChatSession = async (req: Request, res: Response) => {
   try {
     if (!req.user || !req.user.id) {
-      return res.status(401).json({
+      res.status(401).json({
         message: "Unauthorized",
       });
+      return;
     }
 
     const userId = new Types.ObjectId(req.user.id);
     const user = await User.findById(userId);
     if (!user) {
-      return res.status(404).json({
+      res.status(404).json({
         message: "User not found",
       });
+      return;
     }
 
     const sessionId = uuidv4();
@@ -367,7 +368,7 @@ Remember: You are Dr. Maya, a licensed psychologist. Respond with clinical exper
     let therapeuticResponse = responseResult.text || "I'm here to work with you on this. Could you tell me more about what you're experiencing?";
 
     // Apply professional optimization
-    therapeuticResponse = optimizeTherapistResponse(therapeuticResponse, clinicalAnalysis.primaryFocus, clinicalAnalysis);
+    therapeuticResponse = optimizeTherapistResponse(therapeuticResponse, clinicalAnalysis);
     
     console.log('Generated professional response:', therapeuticResponse);
     
@@ -441,7 +442,8 @@ export const getSessionHistory = async (req: Request, res: Response) => {
 
     if (!session) {
       logger.warn("Session not found for history:", { sessionId, userId });
-      return res.status(404).json({ message: "Session not found" });
+      res.status(404).json({ message: "Session not found" });
+      return;
     }
 
     res.json({
@@ -449,9 +451,11 @@ export const getSessionHistory = async (req: Request, res: Response) => {
       startTime: session.startTime,
       status: session.status,
     });
+    return;
   } catch (error) {
     logger.error("Error fetching session history:", error);
     res.status(500).json({ message: "Error fetching session history" });
+    return;
   }
 };
 
@@ -470,14 +474,17 @@ export const getChatSession = async (req: Request, res: Response) => {
     
     if (!chatSession) {
       logger.warn(`Chat session not found: ${sessionId} for user: ${userId}`);
-      return res.status(404).json({ error: "Chat session not found" });
+      res.status(404).json({ error: "Chat session not found" });
+      return;
     }
     
     logger.info(`Found chat session: ${sessionId}`);
     res.json(chatSession);
+    return;
   } catch (error) {
     logger.error("Failed to get chat session:", error);
     res.status(500).json({ error: "Failed to get chat session" });
+    return;
   }
 };
 
@@ -499,14 +506,17 @@ export const getChatHistory = async (req: Request, res: Response) => {
 
     if (!session) {
       console.log('Session not found, returning empty history');
-      return res.json([]);
+      res.json([]);
+      return;
     }
 
     console.log('Session found:', session.sessionId);
     res.json(session.messages || []);
+    return;
   } catch (error) {
     console.error('Error in getChatHistory:', error);
     logger.error("Error fetching chat history:", error);
     res.status(500).json({ message: "Error fetching chat history" });
+    return;
   }
 };

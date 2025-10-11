@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction } from "express";
+import { Response } from "express";
 import { logger } from "../utils/logger";
 
 // Custom AppError class
@@ -20,10 +20,7 @@ export class AppError extends Error {
 // Centralized error handler middleware
 export const errorHandler = (
   err: Error | AppError,
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {
+  res: Response) => {
   // Handle operational errors (instances of AppError)
   if (err instanceof AppError) {
     logger.error("Operational error:", err.message);

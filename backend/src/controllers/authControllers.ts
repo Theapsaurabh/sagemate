@@ -5,21 +5,23 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
 // Register a new user
-export const register = async (req: Request, res: Response) => {
+export const register = async (req: Request, res: Response): Promise<void> => {
     try {
         const { name, email, password } = req.body;
         
         if (!name || !email || !password) {
-            return res.status(400).json({
+            res.status(400).json({
                 message: "Every field is required"
             });
+            return;
         }
 
         const existingUser = await User.findOne({ email });
         if (existingUser) {
-            return res.status(409).json({ 
+            res.status(409).json({ 
                 message: "User already exists. Please sign in"
             });
+            return;
         }
 
         const hashedPassword = await bcrypt.hash(password, 10);
@@ -34,12 +36,14 @@ export const register = async (req: Request, res: Response) => {
             },
             message: "User registered successfully"
         });
+        return;
 
     } catch (error) {
         res.status(500).json({
             message: "Server Error",
             error
         });
+        return;
     }
 };
 
@@ -86,7 +90,7 @@ export const login = async (req: Request, res: Response) => {
 
         await session.save();
 
-        res.json({
+        return res.json({
             user: {
                 _id: user._id,
                 name: user.name,
@@ -97,7 +101,7 @@ export const login = async (req: Request, res: Response) => {
         });
 
     } catch (error) {
-        res.status(500).json({
+        return res.status(500).json({
             message: "Server Error",
             error
         });

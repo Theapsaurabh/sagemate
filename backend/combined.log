@@ -8441,3 +8441,23 @@
 {"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:38:59.732Z"}
 {"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:38:59.734Z"}
 {"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:38:59.735Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T07:54:55.835Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T07:54:55.847Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T07:54:55.848Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T07:55:12.624Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T07:55:12.631Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T07:55:12.632Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T07:55:47.443Z"}
+{"level":"info","message":"Fetching chat history for session: new, user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T07:55:47.452Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T07:55:47.483Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T07:55:47.530Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T07:55:47.561Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T07:55:47.653Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T07:55:47.692Z"}
+{"level":"info","message":"Processing message: hii","sessionId":"new","timestamp":"2025-10-11T07:55:51.942Z","userId":"68e8d24f25dd858844b0c338"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T07:55:51.990Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T07:55:52.021Z"}
+{"clinicalUrgency":"low","emotionalTone":"neutral","level":"info","message":"Clinical analysis completed:","primaryFocus":"greeting","suggestedApproach":"supportive listening","therapeuticNeed":"none","timestamp":"2025-10-11T07:55:53.671Z"}
+{"level":"info","message":"Therapeutic session updated:","messageCount":38,"sessionId":"new","therapeuticApproach":"supportive listening","timestamp":"2025-10-11T07:55:54.778Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T07:55:54.896Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T07:55:54.929Z"}

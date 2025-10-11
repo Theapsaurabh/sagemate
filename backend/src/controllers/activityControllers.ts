@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-import { Activity, IActivity } from "../models/activity";
+import { Activity } from "../models/activity";
 import { logger } from "../utils/logger";
 
 interface AuthRequest extends Request {
@@ -10,24 +10,26 @@ export const logActivity = async (
   req: AuthRequest,
   res: Response,
   next: NextFunction
-) => {
+): Promise<void> => {
   try {
     const { type, name, description, duration, difficulty, feedback, scheduledFor } = req.body;
-    const userId = req.user._id;
+    const userId = req.user?._id;
     
     if (!userId) {
-      return res.status(401).json({
+      res.status(401).json({
         success: false,
         message: "User not authenticated"
       });
+      return;
     }
 
     // Validate required fields
     if (!type || !name) {
-      return res.status(400).json({
+      res.status(400).json({
         success: false,
         message: "Type and name are required fields"
       });
+      return;
     }
 
     const activityData: any = {
@@ -63,6 +65,7 @@ export const logActivity = async (
   } catch (error) {
     logger.error("Error logging activity:", error);
     next(error);
+    return;
   }
 };
 
@@ -76,10 +79,11 @@ export const getUpcomingActivities = async (
     const { limit = 10, page = 1 } = req.query;
 
     if (!userId) {
-      return res.status(401).json({
+      res.status(401).json({
         success: false,
         message: "User not authenticated"
       });
+      return;
     }
 
     const skip = (parseInt(page as string) - 1) * parseInt(limit as string);
@@ -132,10 +136,11 @@ export const getActivityHistory = async (
     const { limit = 10, page = 1, type, days } = req.query;
 
     if (!userId) {
-      return res.status(401).json({
+      res.status(401).json({
         success: false,
         message: "User not authenticated"
       });
+      return;
     }
 
     const skip = (parseInt(page as string) - 1) * parseInt(limit as string);
@@ -194,17 +199,18 @@ export const updateActivityStatus = async (
   req: AuthRequest,
   res: Response,
   next: NextFunction
-) => {
+): Promise<void> => {
   try {
     const { activityId } = req.params;
     const { status, feedback } = req.body;
     const userId = req.user._id;
 
     if (!userId) {
-      return res.status(401).json({
+      res.status(401).json({
         success: false,
         message: "User not authenticated"
       });
+      return;
     }
 
     const activity = await Activity.findOneAndUpdate(
@@ -218,10 +224,11 @@ export const updateActivityStatus = async (
     );
 
     if (!activity) {
-      return res.status(404).json({
+      res.status(404).json({
         success: false,
         message: "Activity not found"
       });
+      return;
     }
 
     logger.info(`Activity status updated for user ${userId}`, { 
@@ -234,10 +241,12 @@ export const updateActivityStatus = async (
       message: "Activity updated successfully",
       data: activity
     });
+    return;
 
   } catch (error) {
     logger.error("Error updating activity status:", error);
     next(error);
+    return;
   }
 };
 
@@ -251,10 +260,11 @@ export const getActivityStats = async (
     const { days = 30 } = req.query;
 
     if (!userId) {
-      return res.status(401).json({
+      res.status(401).json({
         success: false,
         message: "User not authenticated"
       });
+      return;
     }
 
     const startDate = new Date();
@@ -298,7 +308,6 @@ export const getActivityStats = async (
       status: 'scheduled',
       scheduledFor: { $gte: new Date() }
     });
-
     res.status(200).json({
       success: true,
       data: {
@@ -310,9 +319,11 @@ export const getActivityStats = async (
         byType: stats
       }
     });
+    return;
 
   } catch (error) {
     logger.error("Error fetching activity stats:", error);
     next(error);
+    return;
   }
 };

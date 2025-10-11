@@ -28,8 +28,6 @@ export const processChatMessage = inngest.createFunction(
             currentTechnique: null,
           },
         },
-        goals = [],
-        systemPrompt = `You are a compassionate, professional AI therapist assistant. Provide supportive, empathetic mental health guidance.`,
       } = event.data;
 
       logger.info("Processing chat message:", {
