@@ -40,7 +40,7 @@ export function SessionProvider({ children }: { children: React.ReactNode }) {
       if (token) {
         try {
           
-          const backendUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001";
+          const backendUrl = process.env.NEXT_PUBLIC_API_URL || "https://sagemate-backend.onrender.com";
           const response = await fetch(`${backendUrl}/auth/logout`, {
             method: "POST",
             headers: {
@@ -54,6 +54,7 @@ export function SessionProvider({ children }: { children: React.ReactNode }) {
           } else {
             console.warn("SessionContext: Server-side logout failed, continuing with client-side logout");
           }
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         } catch (error) {
           console.warn("SessionContext: Server logout endpoint unavailable, continuing with client-side logout");
         }
@@ -94,7 +95,7 @@ export function SessionProvider({ children }: { children: React.ReactNode }) {
       console.log("SessionContext: Fetching user data...");
       
       
-      const backendUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001";
+      const backendUrl = process.env.NEXT_PUBLIC_API_URL || "https://sagemate-backend.onrender.com";
       const response = await fetch(`${backendUrl}/auth/me`, {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -107,6 +108,7 @@ export function SessionProvider({ children }: { children: React.ReactNode }) {
         const data = await response.json();
         console.log("SessionContext: User data received:", data);
         const userData = data.user;
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const { password, ...safeUserData } = userData;
         setUser(safeUserData);
         console.log("SessionContext: User state updated:", safeUserData);
