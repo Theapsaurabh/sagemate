@@ -2,7 +2,7 @@ import { NextResponse, NextRequest } from "next/server";
 
 export async function POST(request: NextRequest) {
     const body = await request.json();
-    const API_URL = process.env.API_URL || 'http://localhost:3001';
+    const API_URL = process.env.API_URL || 'https://sagemate-backend.onrender.com';
     
     try {
         const response = await fetch(`${API_URL}/auth/login`, {

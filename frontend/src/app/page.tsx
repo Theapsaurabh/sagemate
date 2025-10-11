@@ -6,10 +6,7 @@ import {
   Waves, 
   Heart, 
   Sparkles, 
-  MessageSquareHeart, 
   Lightbulb, 
-  HeartPulse, 
-  Lock, 
   Clock,
   Shield,
   Users,
@@ -202,7 +199,7 @@ export default function Home() {
                 <Sparkles className="w-6 h-6 text-primary animate-pulse" />
                 <div className="absolute inset-0 bg-primary/20 rounded-full blur-sm" />
               </div>
-              <span className="font-bold text-primary bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+              <span className="font-bold text-primary bg-gradient-to-r from-primary to-primary/80 bg-clip-text">
                 Your AI Mental Health Companion
               </span>
             </div>

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { useEffect, useRef, useState } from "react";
@@ -22,10 +23,29 @@ import {
   createChatSession,
   sendChatMessage,
   getChatHistory,
-  ChatMessage,
   getAllChatSessions,
   ChatSession,
 } from "@/lib/api/chat";
+
+// Ensure ChatMessage interface matches usage
+interface ChatMessage {
+  role: "user" | "assistant";
+  content: string;
+  timestamp: Date;
+  id: string;
+  metadata?: {
+    technique: string;
+    goal: string;
+    progress: any[];
+    analysis?: {
+      emotionalState: string;
+      themes: string[];
+      riskLevel: number;
+      recommendedApproach: string;
+      progressIndicators: string[];
+    };
+  };
+}
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { formatDistanceToNow } from "date-fns";
 import { Separator } from "@/components/ui/separator";
@@ -60,7 +80,7 @@ const glowAnimation = {
       ease: "easeInOut",
     },
   },
-} as const;
+};
 
 const SUGGESTED_QUESTIONS = [
   { id: "1", text: "How can I manage my anxiety better?" },
@@ -81,7 +101,7 @@ export default function TherapyPage() {
   const [mounted, setMounted] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [stressPrompt, setStressPrompt] = useState<StressPrompt | null>(null);
-  const [showActivity, setShowActivity] = useState(false);
+  const [showActivity] = useState(false);
   const [isChatPaused, setIsChatPaused] = useState(false);
   const [showNFTCelebration, setShowNFTCelebration] = useState(false);
   const [isCompletingSession, setIsCompletingSession] = useState(false);

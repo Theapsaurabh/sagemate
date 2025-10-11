@@ -29,7 +29,7 @@ export default function LoginPage() {
     
     try {
       // ✅ CORRECT BACKEND ENDPOINT
-      const backendUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001";
+      const backendUrl = process.env.NEXT_PUBLIC_API_URL || "https://sagemate-backend.onrender.com";
       const response = await fetch(`${backendUrl}/auth/login`, {
         method: "POST",
         headers: {
