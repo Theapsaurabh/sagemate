@@ -7,7 +7,7 @@ export async function GET(
   { params }: { params: Promise<{ sessionId: string }> }
 ) {
   try {
-    const { sessionId } = await params; // Add 'await' here
+    const { sessionId } = await params;
     
     const response = await fetch(
       `${BACKEND_API_URL}/chat/sessions/${sessionId}/history`
@@ -34,7 +34,7 @@ export async function POST(
   { params }: { params: Promise<{ sessionId: string }> }
 ) {
   try {
-    const { sessionId } = await params; // Add 'await' here
+    const { sessionId } = await params;
     const { message } = await req.json();
     
     if (!message) {
@@ -44,9 +44,8 @@ export async function POST(
       );
     }
 
-    // FIXED: Corrected the URL path (removed extra /session)
     const response = await fetch(
-      `${BACKEND_API_URL}/chat/sessions/${sessionId}/message`, // Fixed path
+      `${BACKEND_API_URL}/chat/sessions/${sessionId}/message`,
       {
         method: "POST",
         headers: {
