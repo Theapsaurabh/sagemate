@@ -4,10 +4,10 @@ const BACKEND_API_URL = process.env.BACKEND_API_URL || "https://sagemate-backend
 
 export async function POST(
   req: NextRequest,
-  { params }: { params: { sessionId: string } }
+  { params }: { params: Promise<{ sessionId: string }> }
 ) {
   try {
-    const { sessionId } = params;
+    const { sessionId } = await params;
     const { message } = await req.json();
     
     if (!message) {
@@ -17,9 +17,8 @@ export async function POST(
       );
     }
 
-    // FIX: Correct endpoint URL and method
     const response = await fetch(
-      `${BACKEND_API_URL}/chat/sessions/${sessionId}/messages`, // FIXED: correct endpoint
+      `${BACKEND_API_URL}/chat/sessions/${sessionId}/messages`,
       {
         method: "POST",
         headers: {
