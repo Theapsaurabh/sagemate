@@ -7896,3 +7896,548 @@
 {"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-10T18:34:12.492Z"}
 {"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-10T18:34:12.576Z"}
 {"level":"info","message":"Mood logged for user ","timestamp":"2025-10-10T18:34:27.562Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T04:07:45.266Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T04:07:45.271Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T04:07:45.271Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T04:29:43.705Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T04:29:43.714Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T04:29:43.715Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T04:29:56.227Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T04:29:56.230Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T04:29:56.230Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T04:30:09.434Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T04:30:09.441Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T04:30:09.442Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T04:31:04.650Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T04:31:04.660Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T04:31:04.661Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T04:31:59.366Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T04:31:59.375Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T04:31:59.375Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T04:49:59.758Z"}
+{"activityId":"68e9e2094d3c284f41cfd5e6","level":"info","message":"Activity logged for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T04:50:17.610Z","type":"meditation"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T04:50:17.712Z"}
+{"activityId":"68e9e2214d3c284f41cfd5f3","level":"info","message":"Activity logged for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T04:50:41.046Z","type":"meditation"}
+{"level":"info","message":"Retrieved 1 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T04:50:41.142Z"}
+{"level":"info","message":"Retrieved 1 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T04:51:53.668Z"}
+{"activityId":"68e9e2214d3c284f41cfd5f3","level":"info","message":"Activity status updated for user 68e8d24f25dd858844b0c338","newStatus":"completed","timestamp":"2025-10-11T04:53:04.067Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T04:53:04.195Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T04:55:52.513Z"}
+{"level":"info","message":"Fetching chat history for session: new, user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T04:55:52.523Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T04:55:52.551Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T04:55:52.589Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T04:55:52.617Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T04:55:52.716Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T04:55:52.759Z"}
+{"level":"info","message":"Processing message: hello","sessionId":"new","timestamp":"2025-10-11T04:55:56.738Z","userId":"68e8d24f25dd858844b0c338"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T04:55:56.801Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T04:55:56.827Z"}
+{"clinicalUrgency":"low","emotionalTone":"neutral","level":"info","message":"Clinical analysis completed:","primaryFocus":"emotional expression","suggestedApproach":"supportive listening","therapeuticNeed":"validation","timestamp":"2025-10-11T04:55:59.391Z"}
+{"level":"info","message":"Therapeutic session updated:","messageCount":22,"sessionId":"new","therapeuticApproach":"supportive listening","timestamp":"2025-10-11T04:56:00.604Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T04:56:00.745Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T04:56:00.778Z"}
+{"level":"info","message":"Processing message: best exercise for rest","sessionId":"new","timestamp":"2025-10-11T04:56:39.355Z","userId":"68e8d24f25dd858844b0c338"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T04:56:39.408Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T04:56:39.438Z"}
+{"clinicalUrgency":"low","emotionalTone":"neutral","level":"info","message":"Clinical analysis completed:","primaryFocus":"self-reflection","suggestedApproach":"supportive listening","therapeuticNeed":"insight development","timestamp":"2025-10-11T04:56:41.070Z"}
+{"level":"info","message":"Therapeutic session updated:","messageCount":24,"sessionId":"new","therapeuticApproach":"supportive listening","timestamp":"2025-10-11T04:56:42.235Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T04:56:42.337Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T04:56:42.367Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T04:57:00.776Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T04:57:00.868Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:00:34.109Z"}
+{"level":"info","message":"Fetching chat history for session: new, user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:00:35.244Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:00:35.245Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:00:35.286Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:00:35.326Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:00:35.367Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:00:35.421Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:00:35.456Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:01:01.875Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:01:01.965Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:01:44.949Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:01:45.033Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:02:03.595Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:02:40.829Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:02:40.925Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:02:58.720Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:02:58.815Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:03:30.422Z"}
+{"level":"info","message":"Fetching chat history for session: new, user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:03:30.425Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:03:30.453Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:03:30.487Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:03:30.518Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:03:30.588Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:03:30.623Z"}
+{"level":"info","message":"Created new chat session: 9a79ac50-3193-47dc-ac75-6df0bdad528d for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:03:45.811Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:03:45.909Z"}
+{"level":"info","message":"Fetching chat history for session: 9a79ac50-3193-47dc-ac75-6df0bdad528d, user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:03:45.911Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:03:45.940Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:03:46.018Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:03:46.053Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:03:53.726Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:03:53.822Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:04:14.967Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:04:15.055Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:04:37.201Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:09:09.219Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:09:09.307Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:11:27.736Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:11:27.859Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:11:29.411Z"}
+{"level":"info","message":"Fetching chat history for session: new, user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:11:29.413Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:11:29.449Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:11:29.480Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:11:29.509Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:11:29.597Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:11:29.630Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:11:35.460Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:11:35.577Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:12:42.042Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:12:42.195Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:13:47.989Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:13:48.089Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:17:11.873Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:17:11.974Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:17:13.101Z"}
+{"level":"info","message":"Fetching chat history for session: new, user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:17:13.102Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:17:13.130Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:17:13.162Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:17:13.200Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:17:13.268Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:17:13.305Z"}
+{"level":"info","message":"Fetching chat history for session: new, user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:17:35.744Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:17:35.745Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:17:35.777Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:17:35.806Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:17:35.834Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:17:35.898Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:17:35.936Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:18:00.025Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:18:00.161Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:18:22.485Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:18:22.601Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:19:15.739Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:19:15.837Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:19:34.513Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:19:34.610Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:30:29.455Z"}
+{"level":"info","message":"Fetching chat history for session: book, user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:30:29.459Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:30:29.487Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:30:29.520Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:30:29.551Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:30:29.580Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:30:29.609Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:31:19.256Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:31:19.354Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:31:36.976Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:31:37.074Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:32:19.830Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:32:19.920Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:32:52.280Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:33:13.532Z"}
+{"level":"info","message":"Fetching chat history for session: book, user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:33:13.536Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:33:13.562Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:33:13.609Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:33:13.636Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:33:13.666Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:33:13.713Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:33:42.806Z"}
+{"level":"info","message":"Fetching chat history for session: new, user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:33:42.808Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:33:42.839Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:33:42.877Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:33:42.906Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:33:42.995Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:33:43.037Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T05:35:46.372Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T05:35:46.385Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T05:35:46.386Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T05:36:10.611Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T05:36:10.618Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T05:36:10.619Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T05:36:30.094Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T05:36:30.100Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T05:36:30.101Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T05:36:34.748Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T05:36:34.754Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T05:36:34.755Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T05:36:48.709Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T05:36:48.712Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T05:36:48.712Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T05:36:50.998Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T05:36:51.000Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T05:36:51.001Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T05:36:54.222Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T05:36:54.230Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T05:36:54.231Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T05:36:56.778Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T05:36:56.785Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T05:36:56.786Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T05:37:04.147Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T05:37:04.149Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T05:37:04.149Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T05:37:11.661Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T05:37:11.667Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T05:37:11.668Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T05:37:23.442Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T05:37:23.448Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T05:37:23.448Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T05:37:34.201Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T05:37:34.207Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T05:37:34.207Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T05:37:40.062Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T05:37:40.066Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T05:37:40.067Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T05:38:16.084Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T05:38:16.086Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T05:38:16.087Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:38:32.424Z"}
+{"level":"info","message":"Fetching chat history for session: new, user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:38:32.439Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:38:32.477Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:38:32.510Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:38:32.543Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:38:32.640Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:38:32.696Z"}
+{"level":"info","message":"Processing message: hello","sessionId":"new","timestamp":"2025-10-11T05:38:36.988Z","userId":"68e8d24f25dd858844b0c338"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:38:37.025Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:38:37.070Z"}
+{"level":"error","message":"Error in therapeutic message processing: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.","stack":"Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.\n    at GoogleAuth.getApplicationDefaultAsync (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/google-auth-library/build/src/auth/googleauth.js:287:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async GoogleAuth._GoogleAuth_determineClient (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/google-auth-library/build/src/auth/googleauth.js:834:32)\n    at async GoogleAuth.getClient (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/google-auth-library/build/src/auth/googleauth.js:698:20)\n    at async GoogleAuth.getRequestHeaders (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/google-auth-library/build/src/auth/googleauth.js:730:24)\n    at async NodeAuth.addGoogleAuthHeaders (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:14285:29)\n    at async ApiClient.getHeadersInternal (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:10890:9)\n    at async ApiClient.includeExtraHttpOptionsToRequestInit (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:10765:31)\n    at async ApiClient.request (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:10704:23)\n    at async Models.generateContent (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:12029:24)","timestamp":"2025-10-11T05:38:37.125Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:38:37.213Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:38:37.245Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:43:45.744Z"}
+{"level":"info","message":"Fetching chat history for session: new, user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:43:45.758Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:43:45.780Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:43:45.932Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:43:45.975Z"}
+{"level":"info","message":"Processing message: hello","sessionId":"new","timestamp":"2025-10-11T05:43:51.819Z","userId":"68e8d24f25dd858844b0c338"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:43:51.869Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:43:51.901Z"}
+{"level":"error","message":"Error in therapeutic message processing: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.","stack":"Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.\n    at GoogleAuth.getApplicationDefaultAsync (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/google-auth-library/build/src/auth/googleauth.js:287:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async GoogleAuth._GoogleAuth_determineClient (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/google-auth-library/build/src/auth/googleauth.js:834:32)\n    at async GoogleAuth.getClient (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/google-auth-library/build/src/auth/googleauth.js:698:20)\n    at async GoogleAuth.getRequestHeaders (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/google-auth-library/build/src/auth/googleauth.js:730:24)\n    at async NodeAuth.addGoogleAuthHeaders (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:14285:29)\n    at async ApiClient.getHeadersInternal (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:10890:9)\n    at async ApiClient.includeExtraHttpOptionsToRequestInit (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:10765:31)\n    at async ApiClient.request (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:10704:23)\n    at async Models.generateContent (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:12029:24)","timestamp":"2025-10-11T05:43:51.911Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:43:52.029Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:43:52.063Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:44:02.106Z"}
+{"level":"info","message":"Fetching chat history for session: new, user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:44:02.117Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:44:02.134Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:44:02.319Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:44:02.352Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T05:45:58.794Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T05:45:58.807Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T05:45:58.808Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:48:23.551Z"}
+{"level":"info","message":"Fetching chat history for session: new, user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:48:23.567Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:48:23.613Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:48:23.812Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:48:23.843Z"}
+{"level":"info","message":"Processing message: hii","sessionId":"new","timestamp":"2025-10-11T05:48:27.119Z","userId":"68e8d24f25dd858844b0c338"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:48:27.146Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:48:27.174Z"}
+{"clinicalUrgency":"low","emotionalTone":"neutral","level":"info","message":"Clinical analysis completed:","primaryFocus":"not applicable","suggestedApproach":"supportive listening","therapeuticNeed":"validation","timestamp":"2025-10-11T05:48:28.756Z"}
+{"level":"info","message":"Therapeutic session updated:","messageCount":26,"sessionId":"new","therapeuticApproach":"supportive listening","timestamp":"2025-10-11T05:48:29.981Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:48:30.082Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:48:30.124Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T05:48:47.323Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T05:48:47.342Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T05:48:47.343Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:48:47.648Z"}
+{"level":"info","message":"Fetching chat history for session: new, user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:48:47.660Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:48:47.693Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:48:47.950Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:48:47.986Z"}
+{"level":"info","message":"Processing message: hii","sessionId":"new","timestamp":"2025-10-11T05:48:50.852Z","userId":"68e8d24f25dd858844b0c338"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:48:50.885Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:48:50.913Z"}
+{"level":"error","message":"Error in therapeutic message processing: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.","stack":"Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.\n    at GoogleAuth.getApplicationDefaultAsync (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/google-auth-library/build/src/auth/googleauth.js:287:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async GoogleAuth._GoogleAuth_determineClient (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/google-auth-library/build/src/auth/googleauth.js:834:32)\n    at async GoogleAuth.getClient (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/google-auth-library/build/src/auth/googleauth.js:698:20)\n    at async GoogleAuth.getRequestHeaders (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/google-auth-library/build/src/auth/googleauth.js:730:24)\n    at async NodeAuth.addGoogleAuthHeaders (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:14285:29)\n    at async ApiClient.getHeadersInternal (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:10890:9)\n    at async ApiClient.includeExtraHttpOptionsToRequestInit (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:10765:31)\n    at async ApiClient.request (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:10704:23)\n    at async Models.generateContent (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:12029:24)","timestamp":"2025-10-11T05:48:51.003Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:48:51.102Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T05:48:51.150Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T05:49:05.746Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T05:49:05.752Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T05:49:05.753Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T05:52:38.351Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-10-11T05:52:38.355Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T05:52:38.355Z"}
+{"level":"info","message":"Debug endpoint: http://localhost:3001/api/debug/env","timestamp":"2025-10-11T05:52:38.355Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T05:53:03.097Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-10-11T05:53:03.099Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T05:53:03.099Z"}
+{"level":"info","message":"Debug endpoint: http://localhost:3001/api/debug/env","timestamp":"2025-10-11T05:53:03.099Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T05:55:35.711Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-10-11T05:55:35.713Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T05:55:35.713Z"}
+{"level":"info","message":"Debug endpoint: http://localhost:3001/api/debug/env","timestamp":"2025-10-11T05:55:35.713Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T05:58:40.643Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-10-11T05:58:40.645Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T05:58:40.645Z"}
+{"level":"info","message":"Debug endpoint: http://localhost:3001/api/debug/env","timestamp":"2025-10-11T05:58:40.645Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:00:19.437Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:00:19.445Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-10-11T06:00:19.446Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:00:19.447Z"}
+{"level":"info","message":"Debug endpoint: http://localhost:3001/api/debug/env","timestamp":"2025-10-11T06:00:19.447Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:01:13.915Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:01:13.923Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:01:13.920Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:01:13.920Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:01:13.929Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:01:13.930Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:02:25.951Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:02:25.956Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:02:25.956Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:02:25.990Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:02:25.995Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:02:25.995Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:03:06.057Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:03:06.071Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:03:06.072Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:03:06.139Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:03:06.141Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:03:06.142Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:03:21.811Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:03:21.817Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:03:21.817Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:03:21.818Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:03:21.823Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:03:21.824Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:03:50.432Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:03:50.441Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:03:50.442Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:03:50.477Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:03:50.490Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:03:50.500Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:04:06.031Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:04:06.031Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:04:06.035Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:04:06.036Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:04:06.036Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:04:06.036Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:04:14.687Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:04:14.693Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:04:14.693Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:04:14.723Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:04:14.728Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:04:14.728Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:06:06.768Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:06:06.775Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:06:06.776Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:06:37.543Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:06:37.628Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:06:40.399Z"}
+{"level":"info","message":"Fetching chat history for session: new, user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:06:40.408Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:06:40.430Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:06:40.456Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:06:40.498Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:06:40.608Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:06:40.643Z"}
+{"level":"info","message":"Processing message: hii","sessionId":"new","timestamp":"2025-10-11T06:06:43.931Z","userId":"68e8d24f25dd858844b0c338"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:06:43.985Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:06:44.021Z"}
+{"clinicalUrgency":"low","emotionalTone":"neutral","level":"info","message":"Clinical analysis completed:","primaryFocus":"emotional expression","suggestedApproach":"supportive listening","therapeuticNeed":"validation","timestamp":"2025-10-11T06:06:46.893Z"}
+{"level":"info","message":"Therapeutic session updated:","messageCount":28,"sessionId":"new","therapeuticApproach":"supportive listening","timestamp":"2025-10-11T06:06:48.116Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:06:48.227Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:06:48.267Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:06:58.101Z"}
+{"level":"info","message":"Fetching chat history for session: new, user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:06:58.104Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:06:58.150Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:06:58.297Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:06:58.327Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:07:33.217Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:07:33.313Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:07:35.158Z"}
+{"level":"info","message":"Fetching chat history for session: new, user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:07:35.172Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:07:35.200Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:07:35.230Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:07:35.266Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:07:35.391Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:07:35.431Z"}
+{"level":"info","message":"Processing message: hello","sessionId":"new","timestamp":"2025-10-11T06:07:38.488Z","userId":"68e8d24f25dd858844b0c338"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:07:38.563Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:07:38.606Z"}
+{"clinicalUrgency":"low","emotionalTone":"neutral","level":"info","message":"Clinical analysis completed:","primaryFocus":"beginning of session","suggestedApproach":"supportive listening","therapeuticNeed":"establishment of therapeutic rapport","timestamp":"2025-10-11T06:07:40.367Z"}
+{"level":"info","message":"Therapeutic session updated:","messageCount":30,"sessionId":"new","therapeuticApproach":"supportive listening","timestamp":"2025-10-11T06:07:41.467Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:07:41.592Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:07:41.643Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:08:08.313Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:08:08.321Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:08:08.321Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:08:28.395Z"}
+{"level":"info","message":"Fetching chat history for session: new, user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:08:28.425Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:08:28.451Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:08:28.649Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:08:28.686Z"}
+{"level":"info","message":"Processing message: hello","sessionId":"new","timestamp":"2025-10-11T06:08:32.807Z","userId":"68e8d24f25dd858844b0c338"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:08:32.845Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:08:32.880Z"}
+{"level":"error","message":"Error in therapeutic message processing: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.","stack":"Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.\n    at GoogleAuth.getApplicationDefaultAsync (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/google-auth-library/build/src/auth/googleauth.js:287:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async GoogleAuth._GoogleAuth_determineClient (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/google-auth-library/build/src/auth/googleauth.js:834:32)\n    at async GoogleAuth.getClient (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/google-auth-library/build/src/auth/googleauth.js:698:20)\n    at async GoogleAuth.getRequestHeaders (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/google-auth-library/build/src/auth/googleauth.js:730:24)\n    at async NodeAuth.addGoogleAuthHeaders (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:14285:29)\n    at async ApiClient.getHeadersInternal (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:10890:9)\n    at async ApiClient.includeExtraHttpOptionsToRequestInit (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:10765:31)\n    at async ApiClient.request (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:10704:23)\n    at async Models.generateContent (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:12029:24)","timestamp":"2025-10-11T06:08:32.971Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:08:33.077Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:08:33.149Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:09:10.053Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:09:10.055Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:09:10.056Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:09:12.354Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:09:12.360Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:09:12.361Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:09:30.099Z"}
+{"level":"info","message":"Retrieved 0 upcoming activities for user 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:09:30.201Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:09:31.186Z"}
+{"level":"info","message":"Fetching chat history for session: new, user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:09:31.190Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:09:31.219Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:09:31.253Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:09:31.294Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:09:31.357Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:09:31.387Z"}
+{"level":"info","message":"Processing message: hii","sessionId":"new","timestamp":"2025-10-11T06:09:34.082Z","userId":"68e8d24f25dd858844b0c338"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:09:34.157Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:09:34.194Z"}
+{"clinicalUrgency":"low","emotionalTone":"neutral","level":"info","message":"Clinical analysis completed:","primaryFocus":"emotional expression","suggestedApproach":"supportive listening","therapeuticNeed":"validation","timestamp":"2025-10-11T06:09:36.558Z"}
+{"level":"info","message":"Therapeutic session updated:","messageCount":32,"sessionId":"new","therapeuticApproach":"supportive listening","timestamp":"2025-10-11T06:09:37.984Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:09:38.100Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:09:38.132Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:10:19.030Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:10:19.037Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:10:19.038Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:10:20.275Z"}
+{"level":"info","message":"Fetching chat history for session: new, user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:10:20.295Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:10:20.312Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:10:20.484Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:10:20.518Z"}
+{"level":"info","message":"Processing message: hii","sessionId":"new","timestamp":"2025-10-11T06:10:23.434Z","userId":"68e8d24f25dd858844b0c338"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:10:23.481Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:10:23.525Z"}
+{"clinicalUrgency":"low","emotionalTone":"neutral","level":"info","message":"Clinical analysis completed:","primaryFocus":"unclear","suggestedApproach":"supportive listening","therapeuticNeed":"validation","timestamp":"2025-10-11T06:10:24.762Z"}
+{"level":"info","message":"Therapeutic session updated:","messageCount":34,"sessionId":"new","therapeuticApproach":"supportive listening","timestamp":"2025-10-11T06:10:25.752Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:10:25.869Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:10:25.907Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:10:46.745Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:10:46.752Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:10:46.753Z"}
+{"level":"info","message":"Processing message: hii","sessionId":"new","timestamp":"2025-10-11T06:10:48.165Z","userId":"68e8d24f25dd858844b0c338"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:10:48.212Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:10:48.341Z"}
+{"level":"error","message":"Error in therapeutic message processing: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.","stack":"Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.\n    at GoogleAuth.getApplicationDefaultAsync (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/google-auth-library/build/src/auth/googleauth.js:287:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async GoogleAuth._GoogleAuth_determineClient (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/google-auth-library/build/src/auth/googleauth.js:834:32)\n    at async GoogleAuth.getClient (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/google-auth-library/build/src/auth/googleauth.js:698:20)\n    at async GoogleAuth.getRequestHeaders (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/google-auth-library/build/src/auth/googleauth.js:730:24)\n    at async NodeAuth.addGoogleAuthHeaders (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:14285:29)\n    at async ApiClient.getHeadersInternal (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:10890:9)\n    at async ApiClient.includeExtraHttpOptionsToRequestInit (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:10765:31)\n    at async ApiClient.request (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:10704:23)\n    at async Models.generateContent (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:12029:24)","timestamp":"2025-10-11T06:10:48.385Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:10:48.520Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:10:48.556Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:10:57.851Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:10:57.857Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:10:57.858Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:11:05.848Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:11:05.855Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:11:05.856Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:13:56.589Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-10-11T06:13:56.592Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:13:56.594Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:14:15.287Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-10-11T06:14:15.288Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:14:15.289Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:15:34.951Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:15:34.958Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-10-11T06:15:34.959Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:15:34.959Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:16:23.787Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:16:23.798Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-10-11T06:16:23.799Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:16:23.799Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:16:30.853Z"}
+{"level":"info","message":"Fetching chat history for session: new, user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:16:30.859Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:16:30.896Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:16:31.057Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:16:31.086Z"}
+{"level":"info","message":"Processing message: hii","sessionId":"new","timestamp":"2025-10-11T06:16:35.679Z","userId":"68e8d24f25dd858844b0c338"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:16:35.760Z"}
+{"level":"error","message":"Error in therapeutic message processing: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.","stack":"Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.\n    at GoogleAuth.getApplicationDefaultAsync (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/google-auth-library/build/src/auth/googleauth.js:287:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async GoogleAuth._GoogleAuth_determineClient (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/google-auth-library/build/src/auth/googleauth.js:834:32)\n    at async GoogleAuth.getClient (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/google-auth-library/build/src/auth/googleauth.js:698:20)\n    at async GoogleAuth.getRequestHeaders (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/google-auth-library/build/src/auth/googleauth.js:730:24)\n    at async NodeAuth.addGoogleAuthHeaders (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:14285:29)\n    at async ApiClient.getHeadersInternal (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:10890:9)\n    at async ApiClient.includeExtraHttpOptionsToRequestInit (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:10765:31)\n    at async ApiClient.request (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:10704:23)\n    at async Models.generateContent (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:12029:24)","timestamp":"2025-10-11T06:16:35.830Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:16:35.835Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:16:35.939Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:16:35.972Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:16:45.979Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:16:45.984Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-10-11T06:16:45.985Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:16:45.985Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:16:49.385Z"}
+{"level":"info","message":"Fetching chat history for session: new, user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:16:49.390Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:16:49.415Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:16:49.568Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:16:49.596Z"}
+{"level":"info","message":"Processing message: hii","sessionId":"new","timestamp":"2025-10-11T06:16:52.247Z","userId":"68e8d24f25dd858844b0c338"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:16:52.312Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:16:52.369Z"}
+{"clinicalUrgency":"low","emotionalTone":"neutral","level":"info","message":"Clinical analysis completed:","primaryFocus":"greeting","suggestedApproach":"supportive listening","therapeuticNeed":"validation","timestamp":"2025-10-11T06:16:54.012Z"}
+{"level":"info","message":"Therapeutic session updated:","messageCount":36,"sessionId":"new","therapeuticApproach":"supportive listening","timestamp":"2025-10-11T06:16:55.176Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:16:55.295Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:16:55.325Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:17:43.392Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:17:43.397Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-10-11T06:17:43.398Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:17:43.398Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:17:46.406Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:17:46.413Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-10-11T06:17:46.413Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:17:46.414Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:17:47.677Z"}
+{"level":"info","message":"Fetching chat history for session: new, user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:17:47.686Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:17:47.714Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:17:47.874Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:17:47.906Z"}
+{"level":"info","message":"Processing message: hii","sessionId":"new","timestamp":"2025-10-11T06:17:50.852Z","userId":"68e8d24f25dd858844b0c338"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:17:50.928Z"}
+{"level":"error","message":"Error in therapeutic message processing: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.","stack":"Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.\n    at GoogleAuth.getApplicationDefaultAsync (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/google-auth-library/build/src/auth/googleauth.js:287:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async GoogleAuth._GoogleAuth_determineClient (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/google-auth-library/build/src/auth/googleauth.js:834:32)\n    at async GoogleAuth.getClient (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/google-auth-library/build/src/auth/googleauth.js:698:20)\n    at async GoogleAuth.getRequestHeaders (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/google-auth-library/build/src/auth/googleauth.js:730:24)\n    at async NodeAuth.addGoogleAuthHeaders (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:14285:29)\n    at async ApiClient.getHeadersInternal (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:10890:9)\n    at async ApiClient.includeExtraHttpOptionsToRequestInit (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:10765:31)\n    at async ApiClient.request (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:10704:23)\n    at async Models.generateContent (/Users/ampsaurabh88877gmail.com/sagemate/backend/node_modules/@google/genai/dist/node/index.cjs:12029:24)","timestamp":"2025-10-11T06:17:51.001Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:17:51.003Z"}
+{"level":"info","message":"Fetching chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:17:51.096Z"}
+{"level":"info","message":"Found 0 chat sessions for user: 68e8d24f25dd858844b0c338","timestamp":"2025-10-11T06:17:51.131Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:19:51.965Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:19:51.968Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:19:51.968Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:20:28.259Z"}
+{"level":"info","message":"Server is running on port undefined","timestamp":"2025-10-11T06:20:28.267Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:undefined/api/inngest","timestamp":"2025-10-11T06:20:28.268Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:20:45.209Z"}
+{"level":"info","message":"Server is running on port undefined","timestamp":"2025-10-11T06:20:45.212Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:undefined/api/inngest","timestamp":"2025-10-11T06:20:45.212Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:20:51.569Z"}
+{"level":"info","message":"Server is running on port undefined","timestamp":"2025-10-11T06:20:51.572Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:undefined/api/inngest","timestamp":"2025-10-11T06:20:51.572Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:21:17.550Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:21:17.556Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:21:17.557Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:22:09.164Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:22:09.171Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:22:09.172Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:22:39.573Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:22:39.578Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:22:39.579Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:23:40.116Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:23:40.121Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:23:40.122Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:23:44.413Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:23:44.420Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:23:44.420Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:24:17.033Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:24:17.040Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:24:17.041Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:24:52.494Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:24:52.502Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:24:52.502Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:25:00.060Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:25:00.063Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:25:00.063Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:25:02.333Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:25:02.337Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:25:02.338Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:30:14.338Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:30:14.348Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:30:14.349Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:31:22.317Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:31:22.325Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:31:22.326Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:31:33.830Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:31:33.835Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:31:33.835Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:34:17.904Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:34:17.911Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:34:17.912Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:34:24.319Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:34:24.325Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:34:24.326Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:37:58.389Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:37:58.399Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:37:58.400Z"}
+{"level":"info","message":"MongoDB connected successfully!","timestamp":"2025-10-11T06:38:59.732Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-10-11T06:38:59.734Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-10-11T06:38:59.735Z"}

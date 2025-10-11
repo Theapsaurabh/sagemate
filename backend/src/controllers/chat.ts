@@ -9,7 +9,7 @@ import { InngestEvent } from "../types/inngest";
 import { GoogleGenAI } from "@google/genai";
 
 const genAI = new GoogleGenAI({
-  apiKey: process.env.GEMINI_API_KEY || "AIzaSyDmPD_Qc3HOxSwOIk2bqMpo7syXAVAjcHg",
+  apiKey: process.env.GEMINI_API_KEY ,
 });
 
 // Enhanced helper function to clean and optimize AI responses

@@ -1,7 +1,7 @@
 import express, { Request, Response } from "express";
 import { serve } from "inngest/express";
 import { inngest } from "./inngest";
-import { functions as inngestFunctions } from "./inngest/functions"; // Fixed import
+import { functions as inngestFunctions } from "./inngest/functions"; 
 import { logger } from "./utils/logger";
 import { connectDB } from "./utils/db";
 import dotenv from "dotenv"
@@ -37,7 +37,7 @@ app.use(errorHandler);
 const startServer = async() => {
     try {
         await connectDB();
-        const PORT = process.env.PORT || 3001;
+        const PORT = process.env.PORT ;
         app.listen(PORT, () => {
             logger.info(`Server is running on port ${PORT}`);
             logger.info(`Inngest endpoint available at http://localhost:${PORT}/api/inngest`);

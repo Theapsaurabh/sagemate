@@ -1,10 +1,10 @@
 import express from 'express';
 import {
-    logActivity,
-    getUpcomingActivities,
-    getActivityHistory,
-    updateActivityStatus,
-    getActivityStats
+  logActivity,
+  getUpcomingActivities,
+  getActivityHistory,
+  updateActivityStatus,
+  getActivityStats
 } from '../controllers/activityControllers';
 import { auth } from '../middleware/auth';
 
