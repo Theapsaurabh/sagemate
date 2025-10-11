@@ -3,7 +3,7 @@
 
 import { Container } from "@/components/ui/container";
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   Card,
   CardContent,
@@ -14,7 +14,7 @@ import {
 import {
   ArrowRight,
   Brain,
-  BrainCircuit,
+  
   Calendar,
   Heart,
   Loader2,
@@ -29,6 +29,7 @@ import {
   ChevronRight,
   Zap,
   CheckCircle2,
+  AlertCircle,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
@@ -45,6 +46,13 @@ import {
 import { AnxietyGames } from "@/components/games/anxiety-games";
 import { MoodForm } from "@/components/mood/mood-form";
 import { ActivityLogger } from "@/components/activities/activity-logger";
+import { 
+  getUpcomingActivities, 
+  getActivityStats, 
+  getActivityHistory,
+  updateActivityStatus,
+  type Activity as ActivityType 
+} from "@/lib/api/activity";
 
 interface UpcomingActivity {
   _id: string;
@@ -55,6 +63,7 @@ interface UpcomingActivity {
   difficulty: number;
   scheduledFor: string;
   status: string;
+  timestamp?: string;
 }
 
 // Client-only time display component
@@ -122,10 +131,46 @@ export default function Dashboard() {
   const [showActivity, setShowActivityLogger] = useState(false);
   const [moodScore, setMoodScore] = useState<number | null>(null);
   const [upcomingActivities, setUpcomingActivities] = useState<UpcomingActivity[]>([]);
+  const [recentActivities, setRecentActivities] = useState<ActivityType[]>([]);
+  const [activityStats, setActivityStats] = useState<any>(null);
   const [activitiesLoading, setActivitiesLoading] = useState(true);
+  const [statsLoading, setStatsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const router = useRouter();
 
-  // Mock data - replace with actual data from your backend
+  // Fetch all activity data
+  const fetchActivityData = async () => {
+    try {
+      setActivitiesLoading(true);
+      setError(null);
+
+     
+      const upcomingResponse = await getUpcomingActivities(10, 1);
+      setUpcomingActivities(
+        upcomingResponse.data.activities.map((activity: any) => ({
+          ...activity,
+          duration: activity.duration ?? 0, // Ensure duration is a number
+        }))
+      );
+
+      // Fetch recent activity history
+      const historyResponse = await getActivityHistory(5, 1); // Last 5 activities
+      setRecentActivities(historyResponse.data.activities);
+
+      // Fetch activity stats
+      const statsResponse = await getActivityStats(7); // Last 7 days
+      setActivityStats(statsResponse.data);
+
+    } catch (err: any) {
+      console.error('Error fetching activity data:', err);
+      setError(err.message || 'Failed to load activity data');
+    } finally {
+      setActivitiesLoading(false);
+      setStatsLoading(false);
+    }
+  };
+
+ 
   const wellnessStats = [
     {
       title: "Mood Score",
@@ -138,34 +183,34 @@ export default function Dashboard() {
       trend: moodScore !== null ? "+2 from yesterday" : "Track your mood",
     },
     {
-      title: "Completion Rate",
-      value: "100%",
+      title: "Activities Completed",
+      value: activityStats ? `${activityStats.summary.totalActivities}` : "0",
       icon: Trophy,
       color: "text-amber-500",
       bgColor: "bg-amber-500/10",
       borderColor: "border-amber-200 dark:border-amber-800",
-      description: "Perfect completion rate",
-      trend: "Maintained",
+      description: "Completed this week",
+      trend: activityStats ? `${activityStats.summary.upcomingCount} upcoming` : "Loading...",
     },
     {
-      title: "Therapy Sessions",
-      value: "12 sessions",
-      icon: Heart,
-      color: "text-rose-500",
-      bgColor: "bg-rose-500/10",
-      borderColor: "border-rose-200 dark:border-rose-800",
-      description: "Total sessions completed",
-      trend: "+3 this week",
-    },
-    {
-      title: "Activities Completed",
-      value: `${upcomingActivities.filter(a => a.status === 'completed').length}/8`,
-      icon: Sparkles,
+      title: "Total Duration",
+      value: activityStats ? `${activityStats.byType.reduce((total: number, type: any) => total + (type.totalDuration || 0), 0)} min` : "0 min",
+      icon: ClockIcon,
       color: "text-blue-500",
       bgColor: "bg-blue-500/10",
       borderColor: "border-blue-200 dark:border-blue-800",
-      description: "Daily goals progress",
-      trend: `${Math.round((upcomingActivities.filter(a => a.status === 'completed').length / 8) * 100)}% completed`,
+      description: "Time invested",
+      trend: activityStats ? `${activityStats.byType.length} activity types` : "Loading...",
+    },
+    {
+      title: "Consistency",
+      value: activityStats ? `${Math.round((activityStats.summary.totalActivities / 7) * 100)}%` : "0%",
+      icon: TrendingUp,
+      color: "text-green-500",
+      bgColor: "bg-green-500/10",
+      borderColor: "border-green-200 dark:border-green-800",
+      description: "Weekly consistency",
+      trend: activityStats ? `${activityStats.byType[0]?.type || 'No'} activities` : "Start tracking",
     },
   ];
 
@@ -187,9 +232,9 @@ export default function Dashboard() {
       onClick: () => setShowMoodModal(true),
     },
     {
-      title: "Wellness Check-in",
-      description: "Quick mental health assessment",
-      icon: BrainCircuit,
+      title: "Log Activity",
+      description: "Add a new wellness activity",
+      icon: Activity,
       color: "from-blue-500 to-blue-600",
       iconColor: "text-blue-500",
       onClick: () => setShowActivityLogger(true),
@@ -204,63 +249,9 @@ export default function Dashboard() {
     },
   ];
 
-  const recentActivities = [
-    { time: "2 hours ago", activity: "Completed breathing exercise", type: "exercise" },
-    { time: "4 hours ago", activity: "Logged mood: 8/10", type: "mood" },
-    { time: "1 day ago", activity: "Therapy session completed", type: "therapy" },
-    { time: "2 days ago", activity: "Started new meditation", type: "meditation" },
-  ];
-
   useEffect(() => {
-    fetchUpcomingActivities();
+    fetchActivityData();
   }, []);
-
-  const fetchUpcomingActivities = async () => {
-    try {
-      // Simulate API call - replace with actual API endpoint
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Mock data - replace with actual API response
-      const mockActivities: UpcomingActivity[] = [
-        {
-          _id: "1",
-          type: "meditation",
-          name: "Morning Meditation",
-          description: "Start your day with mindfulness",
-          duration: 15,
-          difficulty: 3,
-          scheduledFor: new Date(Date.now() + 2 * 60 * 60 * 1000).toISOString(),
-          status: "scheduled"
-        },
-        {
-          _id: "2",
-          type: "exercise",
-          name: "Evening Yoga",
-          description: "Relaxing yoga session",
-          duration: 30,
-          difficulty: 5,
-          scheduledFor: new Date(Date.now() + 8 * 60 * 60 * 1000).toISOString(),
-          status: "scheduled"
-        },
-        {
-          _id: "3",
-          type: "breathing",
-          name: "Breathing Exercise",
-          description: "Calm your nervous system",
-          duration: 10,
-          difficulty: 2,
-          scheduledFor: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(),
-          status: "scheduled"
-        }
-      ];
-      
-      setUpcomingActivities(mockActivities);
-    } catch (error) {
-      console.error('Error fetching upcoming activities:', error);
-    } finally {
-      setActivitiesLoading(false);
-    }
-  };
 
   const handleMoodSubmit = async (data: { moodScore: number }) => {
     setIsSavingMood(true);
@@ -275,31 +266,24 @@ export default function Dashboard() {
     }
   };
 
-  const handleActivityLogged = (activity: any) => {
-    if (activity.status === 'scheduled') {
-      setUpcomingActivities(prev => [activity, ...prev]);
-    }
-    fetchUpcomingActivities();
+  const handleActivityLogged = () => {
+    // Refresh all activity data when a new activity is logged
+    fetchActivityData();
   };
 
   const markActivityAsComplete = async (activityId: string) => {
     try {
-      await new Promise(resolve => setTimeout(resolve, 500));
+      setActivitiesLoading(true);
+      await updateActivityStatus(activityId, 'completed');
       
-      setUpcomingActivities(prev => 
-        prev.map(activity => 
-          activity._id === activityId 
-            ? { ...activity, status: 'completed' }
-            : activity
-        )
-      );
-      
-      setTimeout(() => {
-        setUpcomingActivities(prev => prev.filter(activity => activity._id !== activityId));
-      }, 1000);
+      // Refresh the data
+      await fetchActivityData();
       
     } catch (error) {
       console.error('Error marking activity as complete:', error);
+      setError('Failed to mark activity as complete');
+    } finally {
+      setActivitiesLoading(false);
     }
   };
 
@@ -320,6 +304,22 @@ export default function Dashboard() {
     if (isToday(activityDate)) return "Today";
     if (isTomorrow(activityDate)) return "Tomorrow";
     return format(activityDate, "EEE, MMM d");
+  };
+
+  const getTimeLabel = (date: string) => {
+    return format(new Date(date), "h:mm a");
+  };
+
+  const getActivityTypeLabel = (type: string) => {
+    const labels: { [key: string]: string } = {
+      meditation: "Meditation",
+      exercise: "Exercise",
+      therapy: "Therapy",
+      journaling: "Journaling",
+      breathing: "Breathing",
+      mindfulness: "Mindfulness",
+    };
+    return labels[type] || type;
   };
 
   return (
@@ -346,11 +346,34 @@ export default function Dashboard() {
             <div className="flex items-center gap-2 px-3 py-2 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
               <Target className="w-4 h-4 text-green-500" />
               <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                {upcomingActivities.filter(a => a.status === 'completed').length}/8 Goals
+                {activityStats ? activityStats.summary.totalActivities : 0} Activities
               </span>
             </div>
           </div>
         </motion.div>
+
+        {/* Error Display */}
+        {error && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-center gap-3"
+          >
+            <AlertCircle className="w-5 h-5 text-red-500" />
+            <div>
+              <p className="text-red-800 font-medium">Error</p>
+              <p className="text-red-600 text-sm">{error}</p>
+            </div>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={fetchActivityData}
+              className="ml-auto text-red-700 hover:text-red-800 hover:bg-red-100"
+            >
+              Retry
+            </Button>
+          </motion.div>
+        )}
 
         {/* Main Grid Layout */}
         <div className="space-y-6">
@@ -414,66 +437,136 @@ export default function Dashboard() {
                           Wellness Overview
                         </CardTitle>
                         <CardDescription className="text-gray-600 dark:text-gray-400">
-                          Your daily progress overview
+                          Your weekly progress and statistics
                         </CardDescription>
                       </div>
                       <Button 
                         variant="ghost" 
                         size="icon" 
                         className="h-8 w-8"
-                        onClick={fetchUpcomingActivities}
+                        onClick={fetchActivityData}
+                        disabled={statsLoading}
                       >
-                        <Loader2 className={cn("h-4 w-4", activitiesLoading ? "animate-spin" : "")} />
+                        <Loader2 className={cn("h-4 w-4", statsLoading ? "animate-spin" : "")} />
                       </Button>
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {wellnessStats.map((stat, index) => {
-                        const StatIcon = stat.icon;
-                        return (
-                          <motion.div
-                            key={stat.title}
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: 0.3 + index * 0.1 }}
-                            whileHover={{ scale: 1.02 }}
-                            className={cn(
-                              "p-4 rounded-xl border-2 transition-all duration-300 group cursor-pointer",
-                              stat.bgColor,
-                              stat.borderColor
-                            )}
-                          >
-                            <div className="flex items-center justify-between">
-                              <div className="flex items-center gap-3">
-                                <div className={cn("p-2 rounded-lg", stat.bgColor)}>
-                                  <StatIcon className={cn("w-5 h-5", stat.color)} />
-                                </div>
-                                <div>
-                                  <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">
-                                    {stat.title}
-                                  </p>
-                                  <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">
-                                    {stat.description}
-                                  </p>
-                                </div>
+                    {statsLoading ? (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {[...Array(4)].map((_, index) => (
+                          <div key={index} className="p-4 rounded-xl border-2 border-gray-200 dark:border-gray-700 animate-pulse">
+                            <div className="flex items-center gap-3">
+                              <div className="w-10 h-10 rounded-lg bg-gray-300 dark:bg-gray-700" />
+                              <div className="space-y-2 flex-1">
+                                <div className="h-4 bg-gray-300 dark:bg-gray-700 rounded w-3/4" />
+                                <div className="h-3 bg-gray-300 dark:bg-gray-700 rounded w-1/2" />
                               </div>
                             </div>
-                            <div className="mt-3">
-                              <p className="text-2xl font-bold text-gray-900 dark:text-white">
-                                {stat.value}
-                              </p>
-                              <p className="text-xs text-green-600 dark:text-green-400 font-medium mt-1">
-                                {stat.trend}
-                              </p>
+                            <div className="mt-3 space-y-2">
+                              <div className="h-6 bg-gray-300 dark:bg-gray-700 rounded w-1/2" />
+                              <div className="h-3 bg-gray-300 dark:bg-gray-700 rounded w-2/3" />
                             </div>
-                          </motion.div>
-                        );
-                      })}
-                    </div>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {wellnessStats.map((stat, index) => {
+                          const StatIcon = stat.icon;
+                          return (
+                            <motion.div
+                              key={stat.title}
+                              initial={{ opacity: 0, x: -20 }}
+                              animate={{ opacity: 1, x: 0 }}
+                              transition={{ delay: 0.3 + index * 0.1 }}
+                              whileHover={{ scale: 1.02 }}
+                              className={cn(
+                                "p-4 rounded-xl border-2 transition-all duration-300 group cursor-pointer",
+                                stat.bgColor,
+                                stat.borderColor
+                              )}
+                            >
+                              <div className="flex items-center justify-between">
+                                <div className="flex items-center gap-3">
+                                  <div className={cn("p-2 rounded-lg", stat.bgColor)}>
+                                    <StatIcon className={cn("w-5 h-5", stat.color)} />
+                                  </div>
+                                  <div>
+                                    <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                                      {stat.title}
+                                    </p>
+                                    <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">
+                                      {stat.description}
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="mt-3">
+                                <p className="text-2xl font-bold text-gray-900 dark:text-white">
+                                  {stat.value}
+                                </p>
+                                <p className="text-xs text-green-600 dark:text-green-400 font-medium mt-1">
+                                  {stat.trend}
+                                </p>
+                              </div>
+                            </motion.div>
+                          );
+                        })}
+                      </div>
+                    )}
                   </CardContent>
                 </Card>
               </motion.div>
+
+              {/* Activity Type Breakdown */}
+              {activityStats && activityStats.byType.length > 0 && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                >
+                  <Card className="border-0 shadow-lg bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm">
+                    <CardHeader>
+                      <CardTitle className="text-xl font-bold text-gray-900 dark:text-white">
+                        Activity Breakdown
+                      </CardTitle>
+                      <CardDescription className="text-gray-600 dark:text-gray-400">
+                        Your activity distribution this week
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-4">
+                        {activityStats.byType.map((typeStat: any) => (
+                          <div key={typeStat.type} className="flex items-center justify-between p-3 rounded-lg bg-gray-50 dark:bg-gray-700/50">
+                            <div className="flex items-center gap-3">
+                              <div className="text-2xl">
+                                {getActivityIcon(typeStat.type)}
+                              </div>
+                              <div>
+                                <p className="font-medium text-gray-900 dark:text-white">
+                                  {getActivityTypeLabel(typeStat.type)}
+                                </p>
+                                <p className="text-sm text-gray-600 dark:text-gray-400">
+                                  {typeStat.count} sessions
+                                </p>
+                              </div>
+                            </div>
+                            <div className="text-right">
+                              <p className="font-semibold text-gray-900 dark:text-white">
+                                {typeStat.totalDuration} min
+                              </p>
+                              <p className="text-sm text-gray-600 dark:text-gray-400">
+                                Avg: {typeStat.avgDifficulty || 0}/10
+                              </p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              )}
 
               {/* Anxiety Games Section */}
               <motion.div
@@ -549,7 +642,7 @@ export default function Dashboard() {
                                   {activity.name}
                                 </h4>
                                 <Badge variant="outline" className="text-xs">
-                                  {activity.type}
+                                  {getActivityTypeLabel(activity.type)}
                                 </Badge>
                               </div>
                               
@@ -563,8 +656,7 @@ export default function Dashboard() {
                                   <span>{getDateLabel(activity.scheduledFor)}</span>
                                 </div>
                                 <div className="flex items-center gap-1">
-                                  <div className="w-2 h-2 rounded-full bg-blue-500" />
-                                  <span>Level {activity.difficulty}/10</span>
+                                  <span>⏰ {getTimeLabel(activity.scheduledFor)}</span>
                                 </div>
                               </div>
                               
@@ -581,6 +673,7 @@ export default function Dashboard() {
                                 variant="ghost"
                                 onClick={() => markActivityAsComplete(activity._id)}
                                 className="h-8 w-8 p-0 text-green-600 hover:text-green-700 hover:bg-green-50"
+                                disabled={activitiesLoading}
                               >
                                 <CheckCircle2 className="w-4 h-4" />
                               </Button>
@@ -619,28 +712,46 @@ export default function Dashboard() {
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-4">
-                      {recentActivities.map((activity, index) => (
-                        <motion.div
-                          key={index}
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: 0.5 + index * 0.1 }}
-                          className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors group"
-                        >
-                          <div className="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0" />
-                          <div className="flex-1 min-w-0">
-                            <p className="text-sm font-medium text-gray-900 dark:text-white">
-                              {activity.activity}
-                            </p>
-                            <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                              {activity.time}
-                            </p>
-                          </div>
-                          <ChevronRight className="w-4 h-4 text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity" />
-                        </motion.div>
-                      ))}
+                      {recentActivities.length === 0 ? (
+                        <div className="text-center py-4 text-gray-500 dark:text-gray-400">
+                          <p>No recent activities</p>
+                          <p className="text-sm mt-1">Start logging activities to see them here</p>
+                        </div>
+                      ) : (
+                        recentActivities.map((activity, index) => (
+                          <motion.div
+                            key={activity._id}
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.5 + index * 0.1 }}
+                            className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors group"
+                          >
+                            <div className="text-xl flex-shrink-0 mt-1">
+                              {getActivityIcon(activity.type)}
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <p className="text-sm font-medium text-gray-900 dark:text-white">
+                                {activity.name}
+                              </p>
+                              <div className="flex items-center gap-2 mt-1 text-xs text-gray-500 dark:text-gray-400">
+                                <span>{getActivityTypeLabel(activity.type)}</span>
+                                <span>•</span>
+                                <span>{activity.duration} min</span>
+                                <span>•</span>
+                                <span>{activity.timestamp ? format(new Date(activity.timestamp), 'MMM d') : 'Recently'}</span>
+                              </div>
+                            </div>
+                            <ChevronRight className="w-4 h-4 text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                          </motion.div>
+                        ))
+                      )}
                     </div>
-                    <Button variant="ghost" className="w-full mt-4" size="sm">
+                    <Button 
+                      variant="ghost" 
+                      className="w-full mt-4" 
+                      size="sm"
+                      onClick={() => router.push('/activities/history')}
+                    >
                       View All Activity
                     </Button>
                   </CardContent>
@@ -661,7 +772,7 @@ export default function Dashboard() {
                         <span className="font-semibold">Daily Inspiration</span>
                       </div>
                       <p className="text-sm leading-relaxed">
-                        Progress, not perfection. Every small step you take today is a victory in your mental health journey."
+                        Progress, not perfection. Every small step you take today is a victory in your mental health journey.
                       </p>
                       <div className="flex items-center justify-between text-xs text-white/80">
                         <span>Your AI Therapist</span>

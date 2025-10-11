@@ -1,3 +1,5 @@
+import { Key } from "readline";
+
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export interface ChatMessage {
   id: Key | null | undefined;
@@ -252,6 +254,7 @@ export const getChatHistory = async (
     }
 
     return data.map((msg: any) => ({
+      id: msg.id ?? null,
       role: msg.role,
       content: msg.content,
       timestamp: new Date(msg.timestamp || msg.timeStamp || new Date()),

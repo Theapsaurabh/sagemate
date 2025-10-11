@@ -14,12 +14,15 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { CalendarIcon, Clock, Activity, X, CheckCircle2 } from "lucide-react";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
+import { logActivity, ActivityEntry } from "@/lib/api/activity";
 
 interface ActivityLoggerProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   onActivityLogged: (activity: any) => void;
 }
+
+
 
 const activityTypes = [
   { value: "meditation", label: "Meditation", icon: "🧘", color: "from-purple-500 to-purple-600" },
@@ -43,6 +46,7 @@ export function ActivityLogger({ open, onOpenChange, onActivityLogged }: Activit
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isScheduled, setIsScheduled] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -66,21 +70,28 @@ export function ActivityLogger({ open, onOpenChange, onActivityLogged }: Activit
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
 
     try {
-      const payload = {
-        ...formData,
+      const payload: ActivityEntry = {
+        type: formData.type,
+        name: formData.name,
+        description: formData.description || undefined,
+        duration: formData.duration,
+        difficulty: formData.difficulty,
+        feedback: formData.feedback || undefined,
+        scheduledFor: formData.scheduledFor || undefined,
         status: isScheduled && formData.scheduledFor ? 'scheduled' : 'completed'
       };
 
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const result = await logActivity(payload);
       
-      onActivityLogged(payload);
+      onActivityLogged(result.data);
       resetForm();
       onOpenChange(false);
-    } catch (error) {
-      console.error('Error logging activity:', error);
+    } catch (err: any) {
+      console.error('Error logging activity:', err);
+      setError(err.message || 'Failed to log activity. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -97,6 +108,7 @@ export function ActivityLogger({ open, onOpenChange, onActivityLogged }: Activit
       scheduledFor: null,
     });
     setIsScheduled(false);
+    setError(null);
   };
 
   const handleClose = () => {
@@ -157,10 +169,16 @@ export function ActivityLogger({ open, onOpenChange, onActivityLogged }: Activit
                 
                 {/* Scrollable Content */}
                 <CardContent className="flex-1 overflow-y-auto py-6 px-6">
+                  {error && (
+                    <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
+                      {error}
+                    </div>
+                  )}
+                  
                   <form onSubmit={handleSubmit} className="space-y-6">
                     {/* Activity Type Selection */}
                     <div className="space-y-4">
-                      <Label className="text-base font-semibold">Activity Type</Label>
+                      <Label className="text-base font-semibold">Activity Type *</Label>
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                         {activityTypes.map((activity) => (
                           <button
@@ -186,7 +204,7 @@ export function ActivityLogger({ open, onOpenChange, onActivityLogged }: Activit
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <Label htmlFor="name" className="text-sm font-medium">
-                          Activity Name
+                          Activity Name *
                         </Label>
                         <Input
                           id="name"
